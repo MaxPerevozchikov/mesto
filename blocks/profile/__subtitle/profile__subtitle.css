@@ -1,0 +1,15 @@
+.profile__subtitle {
+  color: white;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 21,78px;
+  grid-row: 2/3;
+  grid-column: 2/4;
+  max-width: 336px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 0 30px;
+}
