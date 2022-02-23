@@ -1,0 +1,14 @@
+.elements__like_button {
+  background: url(../../../../images/VectorHeart.svg);
+  width: 22px;
+  height: 19px;
+  background-repeat: no-repeat;
+  border: none;
+  align-self: center;
+  justify-self: end;
+  margin: 30px 27px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

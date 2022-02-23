@@ -1,14 +1,7 @@
 .elements__item_image {
   width: 282px;
-}
+  border-radius: 10px 10px 0 0;
+  grid-column: 1/3;
+  grid-row: 1/2;
 
-.elements___item_image::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: white;
-  height: 361px;
 }

@@ -1,0 +1,6 @@
+.popup__span_info {
+  height: 30px;
+  margin: 13px 36px 0 36px;  
+  border-top: 1px solid black;
+  opacity: .2;
+}
