@@ -6,3 +6,11 @@
   grid-template-rows: repeat(2, minmax (min-content, max-content));
   grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, 582px) minmax(min-content, max-content);
 }
+
+@media screen and (min-width: 320px) and (max-width: 637px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}

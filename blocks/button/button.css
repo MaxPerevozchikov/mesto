@@ -1,0 +1,17 @@
+.button {
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity .5s;
+  box-sizing: border-box;
+  display: block;
+}
+
+.button:hover {
+  transition: opacity .2s;
+  opacity: .5;
+}
+
+.button:focus-visible {
+  outline-offset: 1.5px;
+  outline: 2px solid #c4ffa2;
+}
