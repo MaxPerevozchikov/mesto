@@ -22,7 +22,25 @@ function popupClose() {
   popup.classList.toggle('popup__opened');
 }
 
+function formSubmitHandler(evt) {
+  evt.preventDefault();
+  if (
+    !nameFormInput.value ||
+    !descriptionFormInput.value ||
+    nameFormInput.value.trim() === '' ||
+    descriptionFormInput.value.trim() === ''
+  ) {
+    alert('Введите информацию.');
+  } else {
+    titleProfile.textContent = nameFormInput.value;
+    subtitleProfile.textContent = descriptionFormInput.value;
+    popupClose();
+  }
+}
+
 buttonProfile.addEventListener('click', popupOpen);
+formItem.addEventListener('submit', formSubmitHandler);
 buttonClose.addEventListener('click', popupClose);
+
 
 
