@@ -1,7 +1,6 @@
-.elements__item_image {
+.elements__item-image {
   width: 282px;
   border-radius: 10px 10px 0 0;
   grid-column: 1/3;
   grid-row: 1/2;
-
 }
