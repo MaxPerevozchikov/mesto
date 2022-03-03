@@ -3,7 +3,7 @@
   max-width: 880px;
   margin: 0 auto;
   padding-top: 40px;
-  grid-template-rows: repeat(2, minmax (min-content, max-content));
+  grid-template-rows: repeat(2, minmax(min-content, max-content));
   grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, 582px) minmax(min-content, max-content);
 }
 

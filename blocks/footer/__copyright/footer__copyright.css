@@ -7,3 +7,11 @@
   line-height: 21.78px;
   margin: 0;
 }
+
+@media screen and (min-width: 320px) and (max-width: 637px) {
+  .footer__copyright {
+    font-size: 14px;
+    line-height: 16.94px;
+    padding-top: 13px;
+  }
+}

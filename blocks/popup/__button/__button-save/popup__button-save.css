@@ -9,6 +9,15 @@
   font-style: normal;
   height: 50px;
   margin: 18px 36px 37px 36px;
-  border-radius: 4px;
+  border-radius: 2px;
+  border: none;
+}
 
+@media screen and (min-width: 320px) and (max-width: 679px) {
+  .popup__button-save {
+    max-width: 238px;
+    margin: 1px 22px 25px 22px;
+    font-size: 14px;
+    line-height: 16.94px;
+  }
 }

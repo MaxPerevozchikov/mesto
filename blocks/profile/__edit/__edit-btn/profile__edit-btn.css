@@ -1,7 +1,7 @@
-.profile__edit-addButton {
+.profile__edit-btn {
   width: 150px;
   height: 50px;
-  background: url(../../../images/VectorAdd.png);
+  background: url(../../../../images/add.svg);
   background-repeat: no-repeat;
   border: 1px solid #fff;
   background-position: 50%;
@@ -10,10 +10,11 @@
   justify-self: end;
   align-self: center;
   align-content: center;
+  border-radius: 2px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 637px) {
-  .profile__edit-addButton {
+  .profile__edit-btn {
     width: 282px;
   }
 }

@@ -14,10 +14,3 @@
     width: max-content;
   }
 }
-
-
-@media screen and (max-width: 650px) {
-  .elements__item {
-    width: max-content;
-  }
-}

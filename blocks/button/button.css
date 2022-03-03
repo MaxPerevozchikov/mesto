@@ -8,10 +8,5 @@
 
 .button:hover {
   transition: opacity .2s;
-  opacity: .5;
-}
-
-.button:focus-visible {
-  outline-offset: 1.5px;
-  outline: 2px solid #c4ffa2;
+  opacity: .6;
 }

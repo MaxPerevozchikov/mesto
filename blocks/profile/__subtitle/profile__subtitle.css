@@ -18,6 +18,9 @@
     align-self: center;
     margin: 0 auto;
     margin-bottom: 31px;
-  }
-  
+    font-size: 14px;
+    line-height: 16.94px;
+    margin-left: 63px;
+    max-width: 189px;
+  } 
 }
