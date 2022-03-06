@@ -7,8 +7,8 @@ let buttonProfile = document.querySelector('.profile__edit-button');
 let popup = document.querySelector('.popup');
 let buttonClose = document.querySelector('.popup__button-close');
 let formItem = document.querySelector('.popup__form');
-let nameFormInput = document.querySelector('.popup__input_name');
-let descriptionFormInput = document.querySelector('.popup__input_description');
+let nameFormInput = document.querySelector('.popup_input_name');
+let descriptionFormInput = document.querySelector('.popup_input_description');
 
 function popupOpen() {
   popup.classList.toggle('popup_opened');
