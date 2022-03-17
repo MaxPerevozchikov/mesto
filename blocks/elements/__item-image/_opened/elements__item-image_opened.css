@@ -1,0 +1,15 @@
+.elements__item-image_opened {
+  display: flex;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .3s linear;
+  position: fixed;
+  top: 90px;
+  left: auto;
+  right: auto;
+  bottom: 68px;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 1;
+}

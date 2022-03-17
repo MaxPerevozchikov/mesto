@@ -11,7 +11,7 @@
   <div class="page">
     <header class="header">
       <img class="header__logo"
-      src="./images/Vector.svg"
+      src="./images/logo.svg"
       alt="Логотип проекта Место">
     </header>
   <main class="content">
@@ -22,11 +22,25 @@
       <div class="profile__info">
       <h1 class="profile__title">Жак-Ив Кусто</h1>
       <p class="profile__subtitle">Исследователь океана</p>
-      <button class="button profile__edit-button" type="button"></button>
+      <button id="profile-edit" class="button profile__edit-button" type="button"
+      data-popup-id="profile"></button>
       </div>
-      <button class="button profile__edit-btn" type="button"></button>
+      <button id="create-card" class="button profile__edit-btn" type="button"
+      data-popup-id="create"></button>
     </section>
-  
+    
+    
+    <template id="elements">
+      <div class="elements__item">
+        <button class="elements__delete" type="button"></button> 
+        <img class="elements__item-image"  src="#" alt="Картинка">
+        <h2 class="elements__item-title"></h2>
+        <button class="button elements__like-button" type="button"></button>
+        </div>
+    </template>
+
+
+
     <section class="elements">
       <div class="elements__item">
         <img class="elements__item-image" src="./images/karachaevsk.jpg" alt="Изображен старинный храм на горе">
@@ -63,13 +77,27 @@
     <footer class="footer">
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
     </footer>
-  <div class="popup">
+  <div id="profile" class="popup">
     <div class="popup__container">
-      <button class="button popup__button-close" type="button"></button>
+      <button data-popup-id="profile" id="popup-close" class="button popup__button-close" type="button"></button>
       <form class="popup__form" method="post" name="popup">
         <h2 class="popup__title">Редактировать профиль</h2>
         <input class="popup__input popup__input_type_name" type="text" placeholder="Жак-Ив Кусто" name="name">
         <input class="popup__input popup__input_type_description" type="text" placeholder="Исследователь океана" name="description">
+        <button class="button popup__button-save" type="submit">Сохранить</button>
+      </form>
+    </div>  
+  </div>
+
+
+  <div id="create" class="popup">
+    <div class="popup__container">
+      <button data-popup-id="create" id="popup-close_card" class="button popup__button-close" type="button"></button>
+      <form id="create_form" class="popup__form" method="post" name="popup">
+        <h2 class="popup__title">Новое место</h2>
+        <input id="create_name" class="popup__input popup__input_type_name" type="text" placeholder="Название" name="name">
+        <input id="create_image" class="popup__input popup__input_type_description" type="text" placeholder="Ссылка на картинку" 
+        src="#" name="description">
         <button class="button popup__button-save" type="submit">Сохранить</button>
       </form>
     </div>  
