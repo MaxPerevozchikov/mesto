@@ -2,12 +2,10 @@
   background-color: white;
   border-radius: 3%;
   overflow: hidden;
-  height: 361px;
-  display: grid;
-  gap: 0;
-  grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
-  grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content);
+  display: flex;
+  flex-direction: column;
   position: relative;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 900px) {

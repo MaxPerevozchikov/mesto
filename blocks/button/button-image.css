@@ -1,0 +1,6 @@
+.button-image {
+  border: none;
+  opacity: 1;
+  transition: opacity .3s linear .2s;
+  cursor: pointer;
+}

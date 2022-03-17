@@ -30,49 +30,18 @@
     </section>
     
     
-    <template id="elements">
+    <template id="elements" class="elements">
       <div class="elements__item">
+        <button class="elements__image-fullscreen button-image" aria-label="Увеличить изображение" type="button">
+          <img id="image" class="elements__item-image" src="#" alt="Картинка">
+        </button>
+      <div class="elements__info">  
         <button class="elements__delete" type="button"></button> 
-        <img class="elements__item-image"  src="#" alt="Картинка">
         <h2 class="elements__item-title"></h2>
         <button class="button elements__like-button" type="button"></button>
-        </div>
+      </div>
+      </div>
     </template>
-
-
-
-    <section class="elements">
-      <div class="elements__item">
-        <img class="elements__item-image" src="./images/karachaevsk.jpg" alt="Изображен старинный храм на горе">
-        <h2 class="elements__item-title">Карачаевск</h2>
-        <button class="button elements__like-button" type="button"></button>
-      </div>
-      <div class="elements__item">
-        <img class="elements__item-image" src="./images/elbrus.jpg" alt="Изображен старинный храм на горе">
-        <h2 class="elements__item-title">Гора Эльбрус</h2>
-        <button class="button elements__like-button" type="button"></button>
-      </div>
-      <div class="elements__item">
-        <img class="elements__item-image" src="./images/dombay.jpg" alt="Изображен старинный храм на горе">
-        <h2 class="elements__item-title">Домбай</h2>
-        <button class="button elements__like-button" type="button"></button>
-      </div>
-      <div class="elements__item">
-        <img class="elements__item-image" src="./images/elbrus.jpg" alt="Изображен старинный храм на горе">
-        <h2 class="elements__item-title">Гора Эльбрус</h2>
-        <button class="button elements__like-button" type="button"></button>
-      </div>
-      <div class="elements__item">
-        <img class="elements__item-image" src="./images/dombay.jpg" alt="Изображен старинный храм на горе">
-        <h2 class="elements__item-title">Домбай</h2>
-        <button class="button elements__like-button" type="button"></button>
-      </div>
-      <div class="elements__item">
-        <img class="elements__item-image" src="./images/karachaevsk.jpg" alt="Изображен старинный храм на горе">
-        <h2 class="elements__item-title">Карачаево-Черкессия</h2>
-        <button class="button elements__like-button" type="button"></button>
-      </div>
-    </section>
   </main>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
@@ -102,6 +71,21 @@
       </form>
     </div>  
   </div>
+  
+
+  <div id="create" class="popup">
+    <div class="popup__container">
+      <div class="popup__fullscreen-image">
+        <button data-popup-id="create" id="popup-close_image" class="button popup__button-close" type="button"></button>
+        <img src="#" class="popup__image" alt="Изображение">
+        <h2 class="popup__image-name">Новое место</h2>
+      </div>
+    </div>    
+  </div>
+
+
+
+  
   </div>
   <script src="./pages/index.js"></script>
 </body>
