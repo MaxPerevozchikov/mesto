@@ -7,9 +7,3 @@
   position: relative;
   justify-content: space-between;
 }
-
-@media screen and (max-width: 900px) {
-  .elements__item {
-    width: max-content;
-  }
-}

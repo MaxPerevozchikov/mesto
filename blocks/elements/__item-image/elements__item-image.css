@@ -6,4 +6,10 @@
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 1;
+}
+
+.elements__item-image:hover {
+  opacity: .8;
+  transition: opacity .3s linear;
 }

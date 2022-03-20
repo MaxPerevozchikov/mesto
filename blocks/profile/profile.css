@@ -12,5 +12,10 @@
     display: flex;
     flex-direction: column;
   }
-  
+}
+
+@media screen and (min-width: 637px) and (max-width: 1197px) {
+  .profile {
+  width: 100%;
+  }
 }
