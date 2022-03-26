@@ -1,9 +1,9 @@
-.elements__image-fullscreen {
+.card__image-full {
   padding: 0;
   position: relative;
 }
 
-.elements__image-fullscreen::before {
+.card__image-full::before {
   content: ' ';
   display: block;
   padding-top: 100%;

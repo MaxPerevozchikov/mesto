@@ -1,4 +1,4 @@
-.elements__like-button {
+.card__like {
   background: url(../../../images/VectorHeart.svg);
   width: 22px;
   height: 19px;
@@ -13,12 +13,12 @@
   text-overflow: ellipsis;
 }
 
-.elements__like-button:hover {
+.card__like:hover {
   opacity: .5;
 }
 
 @media screen and (min-width: 320px) and (max-width: 637px) {
-  .elements__like-button {
+  .card__like {
     margin-right: 20px;
   } 
 }
