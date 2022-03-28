@@ -38,15 +38,6 @@ function closeOnClick(evt) {
   }
 }
 
-// close by overlay
-function closeByClickOverlay(popup) {
-  if (!popupFullScreen.contains(evt.target)) {
-    popup.classList.remove('popup_opened')
-    popup.addEventListener('click', closeByClickOverlay);
-  }
-}
-
-
 //Profile 
 function editProfile(evt) {
   evt.preventDefault();
@@ -57,18 +48,18 @@ function editProfile(evt) {
 
 //creating a card and its elements
 function addElement(item) {
-  const ElementCard = cardTemplate.content.cloneNode(true);
-  const cardName = ElementCard.querySelector('.card__title');
-  const cardImage = ElementCard.querySelector('.card__image');
-  const trahsImage = ElementCard.querySelector('.card__delete');
-  const likeBtn = ElementCard.querySelector('.card__like');
+  const elementCard = cardTemplate.content.cloneNode(true);
+  const cardName = elementCard.querySelector('.card__title');
+  const cardImage = elementCard.querySelector('.card__image');
+  const trahsImage = elementCard.querySelector('.card__delete');
+  const likeBtn = elementCard.querySelector('.card__like');
   cardName.textContent = item.name;
   cardImage.src = item.link;
   cardImage.alt = item.name;
   cardImage.addEventListener('click', fullScreen);
   likeBtn.addEventListener('click', likePicture);
   trahsImage.addEventListener('click', deleteCard);
-  return ElementCard;
+  return elementCard;
 }
 
 // like for card
@@ -90,21 +81,27 @@ function fullScreen(evt) {
   openPopup(popupFullScreen);
 }
 
+// rendering card
+
+function renderCard(item) {
+  const elementCard = addElement(item);
+  containerCard.prepend(elementCard);
+}
+
 // adding a new card
 function addCard(evt) {
   evt.preventDefault();
-  containerCard.prepend(addElement(popupNameCard.value, popupLinkCard.value));
+  renderCard({name: popupNameCard.value, link: popupLinkCard.value});
   closePopup(popupCard);
 }
 
-// application on the opening popup profle
+// application on the opening popup profile
 buttonProfile.addEventListener('click', function () {
   const nameValue = nameFormInput.value.trim();
   const descValue = descriptionFormInput.value.trim();
 
-
-  titleProfile.textContent = nameValue;
-  subtitleProfile.textContent = descValue;
+  nameValue.textContent = titleProfile;
+  descValue.textContent = subtitleProfile;
   openPopup(popupProfile);
 });
 
@@ -117,6 +114,4 @@ popupContainerProfile.addEventListener('submit', editProfile);
 popupContainerCard.addEventListener('submit', addCard);
 
 //adding cards from array
-initialCards.forEach(function (item) {
-  containerCard.prepend(addElement(item));
-});
+initialCards.reverse().forEach(renderCard);
