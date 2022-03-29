@@ -97,11 +97,8 @@ function addCard(evt) {
 
 // application on the opening popup profile
 buttonProfile.addEventListener('click', function () {
-  const nameValue = nameFormInput.value.trim();
-  const descValue = descriptionFormInput.value.trim();
-
-  nameValue.textContent = titleProfile;
-  descValue.textContent = subtitleProfile;
+  nameFormInput.value = titleProfile.textContent;
+  descriptionFormInput.value = subtitleProfile.textContent;
   openPopup(popupProfile);
 });
 
