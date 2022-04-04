@@ -19,21 +19,30 @@ const buttonProfile = document.querySelector('.profile__edit-button');
 const buttonAddCard = document.querySelector('.profile__edit-btn');
 const content = document.querySelector('.content');
 
-//Open and close popup
+//Open and close popup on click and by pressing "Esc" key
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-  popup.addEventListener('click', closeOnClick);
+  popup.addEventListener('click', closeOnClick,);
+  document.addEventListener('keydown', closeOnClickEsc);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
   popup.addEventListener('click', closeOnClick);
+  document.addEventListener('keydown', closeOnClickEsc);
 }
   
 function closeOnClick(evt) {
   if (evt.target.classList.contains('popup__button-close') || evt.target.classList.contains('popup_opened')) {
     const elementTarget = evt.target;
     const popupTarget = elementTarget.closest('.popup_opened');
+    closePopup(popupTarget);
+  }
+}
+
+function closeOnClickEsc(evt) {
+  if (evt.key === 'Escape') {
+    const popupTarget = document.querySelector('.popup_opened');
     closePopup(popupTarget);
   }
 }
