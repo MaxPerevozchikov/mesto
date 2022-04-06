@@ -22,7 +22,7 @@ const content = document.querySelector('.content');
 //Open and close popup on click and by pressing "Esc" key
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-  popup.addEventListener('click', closeOnClick,);
+  popup.addEventListener('click', closeOnClick);
   document.addEventListener('keydown', closeOnClickEsc);
 }
 
@@ -30,6 +30,7 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened');
   popup.addEventListener('click', closeOnClick);
   document.addEventListener('keydown', closeOnClickEsc);
+  resetInputErrors(popup);
 }
   
 function closeOnClick(evt) {
@@ -46,6 +47,7 @@ function closeOnClickEsc(evt) {
     closePopup(popupTarget);
   }
 }
+
 
 //Profile 
 function editProfile(evt) {
@@ -68,6 +70,7 @@ function addElement(item) {
   cardImage.addEventListener('click', fullScreen);
   likeBtn.addEventListener('click', likePicture);
   trahsImage.addEventListener('click', deleteCard);
+  
   return elementCard;
 }
 

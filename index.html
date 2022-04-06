@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="keywords" content="html, css, js">
   <link rel="stylesheet" href="./pages/index.css">
   <title>Mesto</title>
@@ -48,11 +48,15 @@
         <button aria-label="Закрыть" class="button popup__button-close" type="button"></button>
         <form class="popup__form" method="post" name="popup" novalidate>
           <h2 class="popup__title">Новое место</h2>
-          <input id="card-name-input" class="popup__input popup__input_type_card-name" type="text" placeholder="Название" name="card-name-input" required minlength="2" maxlength="30">
-          <span  class="card-name-input-error popup__span-error"></span>
-          <input id="card-image-input" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку"
-          src="#" name="card-image-input" type="url" required>
-          <span class="card-image-input-error popup__span-error"></span>
+          <div class="field field_name">
+            <input id="card-name-input" class="popup__input popup__input_type_card-name" type="text" placeholder="Название" name="card-name-input" required minlength="2" maxlength="30">
+            <span  class="card-name-input-error popup__span-error"></span>
+          </div>
+          <div class="field field_description">
+            <input id="card-image-input" class="popup__input popup__input_type_link" placeholder="Ссылка на картинку"
+            src="#" name="card-image-input" type="url" required>
+            <span class="card-image-input-error popup__span-error"></span>
+          </div>
           <button aria-label="Создать" class="button popup__button-save" type="submit" disabled>Создать</button>
         </form>
       </div>

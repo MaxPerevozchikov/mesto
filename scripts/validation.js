@@ -1,3 +1,14 @@
+function resetInputErrors(popup) {
+  popup.querySelectorAll('.popup__input').forEach((inputElement) => {
+    inputElement.classList.remove('popup__input_error');
+  });
+
+  popup.querySelectorAll('.popup__span-error').forEach((errorElement) => {
+    errorElement.classList.remove('popup__span_error_visible');
+    errorElement.textContent = ' ';
+  });
+}
+
 // Show input error
 const showInputError = (formElement, inputElement, errorMessage, validationForm) => {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
