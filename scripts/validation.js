@@ -1,12 +1,23 @@
 function resetInputErrors(popup) {
   popup.querySelectorAll('.popup__input').forEach((inputElement) => {
     inputElement.classList.remove('popup__input_error');
+    inputElement.textContent = ' ';
   });
 
   popup.querySelectorAll('.popup__span-error').forEach((errorElement) => {
     errorElement.classList.remove('popup__span_error_visible');
     errorElement.textContent = ' ';
   });
+}
+
+function disabledButton(buttonElement, inactiveButtonClass) {
+  buttonElement.classList.add(inactiveButtonClass);
+  buttonElement.setAttribute('disabled', true);
+}
+
+function enableButton(buttonElement, inactiveButtonClass) {
+  buttonElement.removeAttribute('disabled');
+  buttonElement.classList.remove(inactiveButtonClass);
 }
 
 // Show input error

@@ -24,6 +24,8 @@ function openPopup(popup) {
   popup.classList.add('popup_opened');
   popup.addEventListener('click', closeOnClick);
   document.addEventListener('keydown', closeOnClickEsc);
+  disabledButton(popup);
+  defaultCardInput(popup);
 }
 
 function closePopup(popup) {
@@ -46,6 +48,11 @@ function closeOnClickEsc(evt) {
     const popupTarget = document.querySelector('.popup_opened');
     closePopup(popupTarget);
   }
+}
+
+function defaultCardInput() {
+  popupNameCard.value = '';
+  popupLinkCard.value = '';
 }
 
 
