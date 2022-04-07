@@ -18,6 +18,7 @@ const subtitleProfile = document.querySelector('.profile__subtitle');
 const buttonProfile = document.querySelector('.profile__edit-button');
 const buttonAddCard = document.querySelector('.profile__edit-btn');
 const content = document.querySelector('.content');
+const buttonSaveCard = popupContainerCard.querySelector('.popup__button-save');
 
 //Open and close popup on click and by pressing "Esc" key
 function openPopup(popup) {
@@ -112,6 +113,8 @@ function addCard(evt) {
   evt.preventDefault();
   renderCard({name: popupNameCard.value, link: popupLinkCard.value});
   closePopup(popupCard);
+  buttonSaveCard.classList.remove('popup__button-save_disabled');
+  buttonSaveCard.disabled = true;
 }
 
 // application on the opening popup profile
