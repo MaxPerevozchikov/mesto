@@ -1,18 +1,13 @@
-const popupCard = document.querySelector('.popup_card');
-const popupNameCard = popupCard.querySelector('.popup__input_type_card-name');
-const popupLinkCard = popupCard.querySelector('.popup__input_type_link');
-
-
 function openPopup(popup) {
     popup.classList.add('popup_opened');
     popup.addEventListener('click', closeOnClick);
     document.addEventListener('keydown', closeOnClickEsc);
-    //disableButton(popup);
-    defaultCardInput(popup);
   }
   
   function closePopup(popup) {
     popup.classList.remove('popup_opened');
+    popup.removeEventListener('click', closeOnClick);
+    document.removeEventListener('keydown', closeOnClickEsc);
   }
     
   function closeOnClick(evt) {
@@ -30,9 +25,9 @@ function openPopup(popup) {
     }
   }
   
-  function defaultCardInput() {
-    popupNameCard.value = '';
-    popupLinkCard.value = '';
+  function defaultCardInput(nameElement, linkElement) {
+    nameElement.value = '';
+    linkElement.value = '';
   }
 
-  export { openPopup, closePopup, closeOnClick, closeOnClickEsc };
+  export { openPopup, closePopup, closeOnClick, closeOnClickEsc, defaultCardInput };
