@@ -11,7 +11,7 @@
     margin: 20px 36px 37px 36px;
     border-radius: 2px;
     border: none;
-    opacity: 1;
+    opacity: .1;
   }
   
   .popup__button-save_disabled:hover {
@@ -26,3 +26,6 @@
       line-height: 16.94px;
     }
   }
+
+
+  
