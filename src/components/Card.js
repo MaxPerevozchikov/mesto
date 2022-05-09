@@ -1,17 +1,16 @@
-import { openPopup } from "./utility.js";
+//import { openPopup } from "./utility.js";
+
 
 export default class Card {
 	
 	
-	constructor(data, selector) {
+	constructor(data, selector, handleCardClick) {
 		this._name = data.name;
 		this._link = data.link;
 		this._alt = data.name;
 		this._selector = selector;
-		this._imageFullScreen = document.querySelector('.popup__image');
-		this._imageNameFullScreen = document.querySelector('.popup__image-name');
-		this._popupFullScreen = document.querySelector('.popup_full-screen');
-
+		this._handleCardClick = handleCardClick;
+		this._handleCardClick = this._handleCardClick.bind(this);
 	}
 
 	_getTemplate() {
@@ -58,20 +57,18 @@ export default class Card {
 		});
 	}
 
-//like for card
+//Приватный метод лайка карточки
 	_likePicture() {
 		this._likeBtn.classList.toggle('card__like_black');
-}
+	}
 
-// picture fullscreen
+	
+// Приватный метод открытия попапа с картинкой
 	_fullScreen() {
-		this._imageFullScreen.src = this._link;
-		this._imageFullScreen.alt = this._alt;
-		this._imageNameFullScreen.textContent = this._name;
-		openPopup(this._popupFullScreen);
-}
+		this._handleCardClick();
+	}
 
-// deleting a card
+// Приватный метод удаления карточки
 	_deleteCard() {
   	this._element.remove();
 		this._element = null;
