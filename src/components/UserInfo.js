@@ -8,7 +8,7 @@ export default class UserInfo {
 
   // метод, который возвращает объект с данными о имени и роде деятельности пользователя
   getUserInfo() {
-    return this._editProfile = {
+    return {
       name: this._elementName.textContent,
       description: this._elementDescription.textContent,
     };

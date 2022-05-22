@@ -48,29 +48,30 @@ const popupWithForm = new PopupWithForm('.popup_profile', (data) => {
 popupWithForm.setEventListeners();
 
 
-const popupFormAddCard = new PopupWithForm('.popup_card', () => {
-  popupFormAddCard.setEventListeners();
+const popupFormAddCard = new PopupWithForm('.popup_card', (data) => {
+  renderCard(data);
 });
-
+popupFormAddCard.setEventListeners();
 
 //-------создание экземпляра класса UserInfo-----------
 
 const userInfo = new UserInfo({
-  selectorName: '.popup__input_type_name', 
-  selectorDescription: '.popup__input_type_description'
+  selectorName: '.profile__title', 
+  selectorDescription: '.profile__subtitle'
 });
+
 
 
 //------ создание экземпляра класса Section------
 
-const cardList = new Section(
+const section = new Section(
   {
     items: initialCards,
     renderer: renderCard
   },
   '.elements'
 )
-cardList.renderItems();
+section.renderItems();
 
 
 function renderCard(item) {
@@ -78,34 +79,24 @@ function renderCard(item) {
 		popupWithImage.open(this._name, this._link);		
   });
   const elementCard = newCard.generateCard();
-
-  containerCard.prepend(elementCard);
-}
-
-  
-// adding a new card
-function addCard(evt) {
-  evt.preventDefault();
-  renderCard({name: popupNameCard.value, link: popupLinkCard.value});
-  popupFormAddCard.close();
-  buttonSaveCard.classList.remove('popup__button-save_disabled');
-  buttonSaveCard.disabled = true;
+  section.addItemPrepend(elementCard);
 }
 
 
 //запуск валидации инпутов форм
-const validatorEditForm = new FormValidator(validationForm, popupProfile);
-const validatorAddForm = new FormValidator(validationForm, popupCard);
+const profileFormValidator = new FormValidator(validationForm, popupProfile);
+const cardFormValidator = new FormValidator(validationForm, popupCard);
 
-validatorEditForm.enableValidation();
-validatorAddForm.enableValidation();
+profileFormValidator.enableValidation();
+cardFormValidator.enableValidation();
 
 
 
 // Установка слушателей на кнопку открытия попапа с формой редактирования профиля
 buttonProfile.addEventListener('click', function () {
-  nameFormInput.value = userInfo.getUserInfo().name;
-  descriptionFormInput.value = userInfo.getUserInfo().description;
+  const {name, description} = userInfo.getUserInfo();
+  nameFormInput.value = name;
+  descriptionFormInput.value = description;
   popupWithForm.open();
 });
 
@@ -115,6 +106,3 @@ buttonAddCard.addEventListener('click', function () {
   popupFormAddCard.open();
 });
 
-//Сабмит новой карточки и информации о пользователе
-popupContainerProfile.addEventListener('submit', popupWithForm);
-popupContainerCard.addEventListener('submit', addCard);
