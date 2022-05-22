@@ -10,8 +10,8 @@ export default class Section {
 //публичный метод, отвечающий за отрисовку элементов
     renderItems() {
       this._renderedItems.forEach(item => {
-        this._renderer(item)}
-        );
+        this._renderer(item)
+      });
     }
 //публичный метод, принимающий элемент DOM, добавляющий его в начало контейнера 
     addItem(element) {

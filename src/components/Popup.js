@@ -9,7 +9,6 @@ export default class Popup {
   
   setEventListeners() {
     this._popupElement.addEventListener('click', this._handleCloseClick);
-    this._popupCloseButton.addEventListener('click', this._handleCloseClick);
   }
 
   open() {
@@ -31,8 +30,6 @@ export default class Popup {
 
   _handleCloseClick(evt) {
     if (evt.target.classList.contains('popup__button-close') || evt.target.classList.contains('popup_opened')) {
-      const elementTarget = evt.target;
-      elementTarget.closest('.popup_opened');
       this.close();
     }
   }

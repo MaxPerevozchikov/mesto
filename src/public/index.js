@@ -1,15 +1,15 @@
-import '../pages/index.css';
+import '../public/index.css';
 
 
-import initialCards from './components/initialCards.js';
-import { openPopup, closePopup, defaultCardInput } from './components/utility.js';
-import FormValidator from './components/FormValidator.js';
-import Card from './components/Card.js';
-import UserInfo from './components/UserInfo.js';
-import Section from './components/Section.js';
-import Popup from './components/Popup.js';
-import PopupWithImage from './components/PopupWithImage';
-import PopupWithForm from './components/PopupWithForm';
+import initialCards from '../components/initialCards.js';
+import { openPopup, closePopup, defaultCardInput } from '../components/utility.js';
+import FormValidator from '../components/FormValidator.js';
+import Card from '../components/Card.js';
+import UserInfo from '../components/UserInfo.js';
+import Section from '../components/Section.js';
+import Popup from '../components/Popup.js';
+import PopupWithImage from '../components/PopupWithImage';
+import PopupWithForm from '../components/PopupWithForm';
 
 const popupCard = document.querySelector('.popup_card');
 const popupNameCard = popupCard.querySelector('.popup__input_type_card-name');
