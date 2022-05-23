@@ -19,7 +19,7 @@
     "url": "https://github.com/MaxPerevozchikov/mesto/issues"
   },
   "homepage": "https://github.com/MaxPerevozchikov/mesto#readme",
-  "website": "https://maxperevozchikov.github.io/mesto",
+  "website": "https://maxperevozchikov.github.io/mesto/",
   "devDependencies": {
     "@babel/core": "^7.17.10",
     "@babel/preset-env": "^7.17.10",
