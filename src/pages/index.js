@@ -21,9 +21,9 @@ const descriptionFormInput = popupProfile.querySelector('.popup__input_type_desc
 const buttonProfile = document.querySelector('.profile__edit-button');
 const buttonAddCard = document.querySelector('.profile__edit-btn');
 
-const popupAvatar = document.querySelector('.popup__avatar');
-const popupLinkAvatar = popupAvatar.querySelector('.popup__input_type_link_avatar');
-const buttonAvatar = document.querySelector('.button__avatar');
+const popupAvatar = document.querySelector('.popup_avatar');
+const popupLinkAvatar = popupAvatar.querySelector('.popup__input_type_link-avatar');
+const buttonAvatar = document.querySelector('.profile__avatar');
 
 
 const validationForm = {
@@ -37,7 +37,7 @@ const validationForm = {
 
 //Создание экземпляра класса PopupWithForm для редактирования аватара профиля
 
-const popupFormAvatar = new PopupWithForm('.popup__avatar', (data) => {
+const popupFormAvatar = new PopupWithForm('.popup_avatar', (data) => {
   userInfo.setUserInfo(data);
 });
 
@@ -52,7 +52,7 @@ buttonAvatar.addEventListener('click',  () => {
 
 //Создание экземпляра класса PopupWithConfirm для открытия попапа подтверждения действия 
 
-const popupWithConfirm = new PopupWithConfirm('.popup__confirm');
+const popupWithConfirm = new PopupWithConfirm('.popup_confirm');
 popupWithConfirm.setEventListeners();
 
 
