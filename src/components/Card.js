@@ -1,16 +1,18 @@
 //import { openPopup } from "./utility.js";
 
-
 export default class Card {
 	
 	
-	constructor(data, selector, handleCardClick) {
+	constructor(data, selector, handleCardClick, handleDelete) {
 		this._name = data.name;
 		this._link = data.link;
 		this._alt = data.name;
 		this._selector = selector;
 		this._handleCardClick = handleCardClick;
 		this._handleCardClick = this._handleCardClick.bind(this);
+		this._handleDelete = handleDelete;
+		this._handleDelete = this._handleDelete.bind(this);
+		this._removeCard = this._removeCard.bind(this);
 	}
 
 	_getTemplate() {
@@ -68,7 +70,11 @@ export default class Card {
 
 // Приватный метод удаления карточки
 	_deleteCard() {
+		this._handleDelete(this._removeCard);
+	}
+
+	_removeCard() {
   	this._element.remove();
-		this._element = null;
+		//this._element = null;
 	}
 }

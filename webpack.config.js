@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: { main: './src/public/index.js' }, //певрое место, куда заглянет вебпак
+  entry: { main: './src/pages/index.js' }, //певрое место, куда заглянет вебпак
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
@@ -42,7 +42,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: './src/public/index.html' //путь к файлу для подключения плагина html 
+			template: './src/index.html' //путь к файлу для подключения плагина html 
 		}),
 		new CleanWebpackPlugin(), // настраивать не нужно, достаточно вызвать
 		new MiniCssExtractPlugin()

@@ -15,11 +15,6 @@ export default class Section {
     }
 //публичный метод, принимающий элемент DOM, добавляющий его в начало контейнера 
     addItem(element) {
-      this._container.append(element);
-    }
-
-    addItemPrepend(element) {
       this._container.prepend(element);
     }
   }
-  //console.log(this._container);

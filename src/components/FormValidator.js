@@ -93,14 +93,4 @@ export default class FormValidator {
 		errorElement.textContent = ' ';
 	});
 	}
-
-	initialDisableButton(buttonElement, inactiveButtonClass, popup) {
-		this._disableButton(buttonElement, inactiveButtonClass);
-		this._resetInputErrors(popup);
-	}
-
-	initialEnableButton(buttonElement, inactiveButtonClass, popup) {
-		this._enableButton(buttonElement, inactiveButtonClass);
-		this._resetInputErrors(popup);
-	}
 }
